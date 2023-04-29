@@ -1,18 +1,13 @@
-# Semantic Segmentation of Indian Supreme Court Case Documents
+# SemEval2023 Task 6 (Rhetorical Role identification)
 
 ## Introduction
-This is the repository for the paper titled "Identification of Rhetorical Roles of Sentences in Indian Legal Judgments" which is to be presented at the <a href="https://jurix2019.oeg-upm.net/index.html">International Conference on Legal Knowledge and Information Systems (JURIX) 2019</a>.
+This project deals with identification of Rhetorical Roles in Indian Case documents that have a inherent structure to it. The documents are classified to 13 different rhetorical roles for the SemEval task and provided for training. The details of the task is given in this [link](https://sites.google.com/view/legaleval/home). In this project we try to extend the work done in Bhattacharya et. al. and also compare the performance of different BERT based legal models such as [LegalBERT](https://huggingface.co/nlpaueb/legal-bert-base-uncased#:~:text=LEGAL%2DBERT%20is%20a%20family,law%2C%20and%20legal%20technology%20applications.), [InLegalBERT](https://huggingface.co/law-ai/InLegalBERT), [GPT2](https://huggingface.co/gpt2) etc.
 
-Every sentence in a court case document can be assigned a rhetorical (semantic) role, such as 'Arguments', 'Facts', 'Ruling by Present Court', etc. The task of assigning rhetorical roles to individual sentences in a document is known as semantic segmentation. We have developed a deep neural model (Hierarchical BiLSTM CRF) for automatic segmentation of Indian court case documents. A single document is represented as a sequence of sentences. We have used 7 labels for this task: Arguments, Precedent, Statutes, Facts, Ratio Decidendi, Ruling of Lower Court, Ruling of Present Court. 
+The code for the BERT models resides in `rhetorical_roles.ipynb` and `rr.ipynb`. The instruction to run Hierarchial BiLSTM model is given below.
 
-We make available
-
-(1) a set of 50 court case documents judged in the Supreme Court of India, where each sentence has been annotated with its rhetorical role by law student (see the paper for details)
-
-(2) the implementation of our best performing model (Hierarchical BiLSTM CRF)
 
 ## Citation
-If you use this dataset or the codes, please refer to the following paper:
+If you use the Hierarchical BiLSTM code, please refer to the following paper:
 ```
   @inproceedings{bhattacharya-jurix19,
    author = {Bhattacharya, Paheli and Paul, Shounak and Ghosh, Kripabandhu and Ghosh, Saptarshi and Wyner, Adam},
